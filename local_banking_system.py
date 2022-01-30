@@ -1,9 +1,4 @@
-# miras de cs
-# CSGO-vQYJU-QjGRZ-hH84L-AaAnJ-DV43L
-
-
-
-print('ejercicio de sistema bancario\n')
+print('Local Banking system\n')
 
 def menu():
     print("""
@@ -25,14 +20,14 @@ class users:
     # cash = 1000
 
 def advicment():
-    print('The username only can be letter NO numbers and the password only can have numbers')
+    print('The username and the password must init with a letter')
 
 def menu2():
     print("""
 What operation do u want realize?
 
-1)ingres cash
-2)retire cash
+1)deposit money
+2)withdraw money
     """)
 
 error = 'Error'
@@ -47,13 +42,13 @@ elif opc == 2:
     if userr in users.user:
         psw = input('Password: ')
         if psw in users.psw:
-            print(f'Bienvenido {users.user}')
+            print(f'Welcome {users.user}')
             menu2()
             opc2 = int(input(': '))
             if opc2 == 1:
-                cuantity = int(input('how cash do u want ingress: '))
+                cuantity = int(input('how much money do you want to deposit: '))
                 result = cuantity + users.cash
-                print(f'Your actually cash is: {result}')
+                print(f'Your actually money is: {result}')
                 print('Do u wanna realize another operation? [1Yes][2NO]')
                 reopc = int(input())
                 if reopc == 1:
